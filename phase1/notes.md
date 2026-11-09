@@ -56,3 +56,107 @@ by handling errors during execution.
 ## Real-world application
 HeartTalk can use exception handling to validate
 user input and handle unexpected situations.
+
+# File Handling
+
+## What is File Handling?
+File handling allows Python programs to create,
+read, write and update files.
+
+## File Modes
+- r: Read an existing file.
+- w: Write and overwrite existing content.
+- a: Append content without deleting existing data.
+
+## Important Methods
+- read(): Reads the complete file.
+- write(): Writes a string.
+- writelines(): Writes multiple strings.
+- close(): Closes an opened file.
+
+## with open()
+Automatically closes files after use.
+
+## File Paths
+- Relative path: chat.txt
+- Absolute path: Complete file location.
+
+## Exception
+- FileNotFoundError: Raised when a requested file
+  does not exist.
+
+## Real-world Application
+HeartTalk can save conversations in files
+and retrieve them later.
+
+# Iterators and Generators
+
+## Iteration
+Going through items one by one.
+
+## Iterable
+An object whose elements can be accessed one by one.
+Examples: list, tuple, string.
+
+## Iterator
+An object that remembers its current position and returns the next item.
+
+- iter() creates an iterator.
+- next() retrieves the next item.
+- StopIteration occurs when no items remain.
+
+## Generator
+A special iterator created using a function with yield.
+
+- yield produces a value and pauses the function.
+- The function resumes when the next value is requested.
+- Generators help process large data without storing all results together.
+
+## Generator Expression
+A shorter way to create a generator.
+
+Example:
+(length for length in [5, 10, 15])
+
+## Real-world uses
+- Processing large datasets.
+- Reading large files line by line.
+- Streaming AI responses.
+- Machine learning data pipelines.
+
+# Decorators
+
+## What is a decorator?
+A decorator adds extra functionality to an existing function without changing its original code.
+
+## Basic structure
+
+def my_decorator(func):
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
+    return wrapper
+
+## @ syntax
+@my_decorator is equivalent to:
+function_name = my_decorator(function_name)
+
+## *args and **kwargs
+- *args accepts multiple positional arguments and stores them in a tuple.
+- **kwargs accepts multiple keyword arguments and stores them in a dictionary.
+
+## functools.wraps
+Preserves the original function's metadata, such as its name and documentation.
+
+## Execution time decorator
+Can measure how long a function takes using:
+- time.time()
+- end_time - start_time
+
+## Real-world applications
+- Logging
+- Authentication
+- Measuring execution time
+- Access control
+- FastAPI and Flask routes
