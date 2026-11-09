@@ -32,3 +32,27 @@
 ## Real-world application
 Our HeartTalk chatbot uses OOP to organize different
 chatbot types and their behaviours.
+
+# Exception Handling
+
+## What is exception handling?
+It prevents a program from crashing unexpectedly
+by handling errors during execution.
+
+## Important keywords
+
+- try: Code that may cause an error.
+- except: Handles an exception.
+- else: Runs when no exception occurs.
+- finally: Always executes.
+- raise: Manually raises an exception.
+
+## Common exceptions
+
+- ValueError: Invalid value or conversion.
+- ZeroDivisionError: Division by zero.
+- TypeError: Operation on an incompatible type.
+
+## Real-world application
+HeartTalk can use exception handling to validate
+user input and handle unexpected situations.
