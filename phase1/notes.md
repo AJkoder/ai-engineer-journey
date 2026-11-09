@@ -160,3 +160,38 @@ Can measure how long a function takes using:
 - Measuring execution time
 - Access control
 - FastAPI and Flask routes
+
+# Working with JSON
+
+## What is JSON?
+JSON (JavaScript Object Notation) is a lightweight format used to store and exchange structured data between applications.
+
+## JSON and Python data types
+
+- JSON Object `{}` → Python Dictionary
+- JSON Array `[]` → Python List
+- JSON String → Python String
+- JSON Number → Python Integer / Float
+- JSON `true` → Python `True`
+- JSON `false` → Python `False`
+- JSON `null` → Python `None`
+
+## Important JSON functions
+
+- `json.dumps()` – Converts Python data into a JSON string.
+- `json.loads()` – Converts a JSON string into Python data.
+- `json.dump()` – Writes Python data into a JSON file.
+- `json.load()` – Reads a JSON file and converts it into Python data.
+
+## Formatting
+- `indent=4` makes JSON files easier to read.
+
+## Error handling
+- `JSONDecodeError` handles invalid JSON formatting.
+- `FileNotFoundError` handles missing files.
+
+## Real-world applications
+- Storing chatbot conversations.
+- Exchanging data between applications.
+- Working with APIs.
+- Saving structured application data.
