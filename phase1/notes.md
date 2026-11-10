@@ -338,3 +338,36 @@ print(response.headers)
 JSONPlaceholder: https://jsonplaceholder.typicode.com/
 
 Used for practising API and HTTP requests. It simulates data creation, updates and deletion without permanently changing its stored data.
+
+## Logging
+
+Logging records important events that happen while an application runs.
+
+### Why Logging?
+- Helps track application activity.
+- Helps identify errors.
+- Keeps a history of events.
+- Makes debugging easier.
+
+### Python Logging Levels
+
+1. DEBUG - Detailed debugging information.
+2. INFO - Normal application events.
+3. WARNING - Something unusual happened.
+4. ERROR - An operation failed.
+5. CRITICAL - A very serious failure.
+
+### Basic Logging
+
+```python
+import logging
+
+logging.basicConfig(
+    filename="hearttalk.log",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logging.info("HeartTalk started.")
+logging.warning("API is responding slowly.")
+logging.error("Unable to generate a reply.")
