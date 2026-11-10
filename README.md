@@ -19,8 +19,8 @@ My journey from beginner to placement-ready AI Engineer.
 
 ## Projects
 
-Projects will be added as I progress.
+Projects will be added as I progress through the roadmap.
 
-## Technologies
+## Tools and Technologies
 
 Python | Git | GitHub | VS Code
