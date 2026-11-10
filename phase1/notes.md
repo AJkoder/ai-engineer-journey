@@ -195,3 +195,146 @@ JSON (JavaScript Object Notation) is a lightweight format used to store and exch
 - Exchanging data between applications.
 - Working with APIs.
 - Saving structured application data.
+
+
+## Working with APIs
+
+### 1. What is an API?
+API (Application Programming Interface) allows two applications to communicate with each other.
+
+Example: HeartTalk communicates with a backend server to retrieve or send messages.
+
+- Endpoint: A specific URL path used to access an API operation.
+- Request: Information sent to the server.
+- Response: Information returned by the server.
+- JSON: A common format for exchanging data.
+
+### 2. Python Requests Library
+
+Install:
+```bash
+python -m pip install requests
+```
+
+Import:
+```python
+import requests
+```
+
+GET request:
+```python
+response = requests.get(url)
+data = response.json()
+```
+
+POST request:
+```python
+response = requests.post(url, json=data)
+```
+
+Useful response properties:
+- `response.status_code` – HTTP status code.
+- `response.json()` – Converts JSON response into Python data.
+- `response.text` – Returns response body as text.
+- `response.url` – Shows the final request URL.
+- `response.headers` – Shows response headers.
+
+### 3. API Error Handling
+
+```python
+response = requests.get(url, timeout=5)
+response.raise_for_status()
+```
+
+- `timeout=5`: Limits how long the request waits.
+- `raise_for_status()`: Raises HTTPError for unsuccessful HTTP responses (4xx and 5xx).
+
+Important exceptions:
+- `Timeout`
+- `ConnectionError`
+- `HTTPError`
+- `RequestException`
+
+Use `try` and `except` to handle errors gracefully.
+
+---
+
+## HTTP Requests
+
+HTTP (HyperText Transfer Protocol) defines rules for communication between clients and servers.
+
+### 1. HTTP Methods
+
+| Method | Purpose |
+|---|---|
+| GET | Retrieve data |
+| POST | Create a resource |
+| PUT | Replace a resource |
+| PATCH | Partially update a resource |
+| DELETE | Delete a resource |
+
+### 2. Query Parameters
+
+Used to pass filters or additional instructions through the URL.
+
+Example:
+```python
+params = {"userId": 5}
+response = requests.get(url, params=params)
+```
+
+Requests constructs the URL automatically:
+`?userId=5`
+
+### 3. Request Headers
+
+Additional information sent with a request.
+
+Example:
+```python
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer your_api_token"
+}
+```
+
+### 4. Request Body
+
+Contains data sent to the server, commonly with POST, PUT and PATCH.
+
+Example:
+```python
+response = requests.post(url, json=data)
+```
+
+### 5. Response Headers
+
+Additional information returned by the server.
+
+Example:
+```python
+print(response.headers)
+```
+
+`Content-Type: application/json` means the response body contains JSON.
+
+### 6. Important HTTP Status Codes
+
+| Code | Meaning |
+|---|---|
+| 200 | OK |
+| 201 | Created |
+| 204 | No Content |
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 429 | Too Many Requests |
+| 500 | Internal Server Error |
+| 503 | Service Unavailable |
+
+### Practice API
+
+JSONPlaceholder: https://jsonplaceholder.typicode.com/
+
+Used for practising API and HTTP requests. It simulates data creation, updates and deletion without permanently changing its stored data.
